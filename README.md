@@ -7,11 +7,11 @@ In our rat project, with the help of NGS sequencing, we aimed to establish a SNP
 In this repository, I make a note for how to generate mappability files, both with GEM package and my own tools. I adpoted the method of GEM for mapping score (Derrien et al. 2012, http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030377) and the whole procedure followed the instruction of BITS (http://wiki.bits.vib.be/index.php/Create_a_mappability_track#create_a_.27gem.27_index). The real mapping ability for pair end reads is a little higher, because GEM only consider single end reads.
 
 # Preparation for Dataset and Softwares.
-- download reference from UCSC (http://hgdownload.soe.ucsc.edu/goldenPath/rn5/bigZips/rn5.fa.gz); 
+1) download reference from UCSC (http://hgdownload.soe.ucsc.edu/goldenPath/rn5/bigZips/rn5.fa.gz); 
 
-- install GEM package following these instructions: http://algorithms.cnag.cat/wiki/The_GEM_library;
+2) install GEM package following these instructions: http://algorithms.cnag.cat/wiki/The_GEM_library;
 
-- install tabix from Heng Li, which is useful for quick jump from location to location. (http://www.htslib.org/doc/tabix.html)
+3) install tabix from Heng Li, which is useful for quick jump from location to location. (http://www.htslib.org/doc/tabix.html)
 
 # Command line (take 100bp read for example):
 gem-indexer -T 4 -c dna -i rn5.fa -o rn5.index # index reference with 4 processors
